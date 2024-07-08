@@ -1,0 +1,13 @@
+<h1>Superheroes</h1>
+
+<%= link_to 'New Superhero', new_superhero_path %>
+
+<ul>
+  <% @superheroes.each do |superhero| %>
+    <li>
+      <%= link_to superhero.name, superhero %>
+      <%= link_to 'Edit', edit_superhero_path(superhero) %>
+      <%= link_to 'Destroy', superhero, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>

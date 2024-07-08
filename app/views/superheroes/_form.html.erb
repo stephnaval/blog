@@ -1,0 +1,41 @@
+<%= form_with(model: superhero, local: true) do |form| %>
+    <% if superhero.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(superhero.errors.count, "error") %> prohibited this superhero from being saved:</h2>
+        <ul>
+          <% superhero.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :civilian_name %>
+      <%= form.text_field :civilian_name %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :power %>
+      <%= form.text_field :power %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :origin %>
+      <%= form.text_field :origin %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :birthdate %>
+      <%= form.date_select :birthdate %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>  
