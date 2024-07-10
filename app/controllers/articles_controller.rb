@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   
     def new
       # display a form where you can add an article
-      @article = Article.new(article_params)
+      @article = Article.new
     end
   
     def create
