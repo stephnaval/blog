@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @disney %>
+
+<div>
+  <%= link_to "Edit this disney", edit_disney_path(@disney) %> |
+  <%= link_to "Back to disneys", disneys_path %>
+
+  <%= button_to "Destroy this disney", @disney, method: :delete %>
+</div>

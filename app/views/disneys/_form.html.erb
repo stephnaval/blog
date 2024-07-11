@@ -1,0 +1,32 @@
+<%= form_with(model: disney) do |form| %>
+  <% if disney.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(disney.errors.count, "error") %> prohibited this disney from being saved:</h2>
+
+      <ul>
+        <% disney.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :main_character, style: "display: block" %>
+    <%= form.text_field :main_character %>
+  </div>
+
+  <div>
+    <%= form.label :year_created, style: "display: block" %>
+    <%= form.number_field :year_created %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

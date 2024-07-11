@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Disneys</h1>
+
+<div id="disneys">
+  <% @disneys.each do |disney| %>
+    <%= render disney %>
+    <p>
+      <%= link_to "Show this disney", disney %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New disney", new_disney_path %>
