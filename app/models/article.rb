@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
-    validates :name, presence: true, uniqueness: true
-    validates :body, presence: true, length: { minimum: 5 }
+    validates :name, presence: true
+    validates :body, presence: true
+    has_many :comments, dependent: :destroy
 end

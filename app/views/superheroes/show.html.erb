@@ -1,0 +1,8 @@
+<h1><%= @superhero.name %></h1>
+<p><strong>Civilian Name:</strong> <%= @superhero.civilian_name %></p>
+<p><strong>Power:</strong> <%= @superhero.power %></p>
+<p><strong>Origin:</strong> <%= @superhero.origin %></p>
+<p><strong>Birthdate:</strong> <%= @superhero.birthdate %></p>
+
+<%= link_to 'Edit', edit_superhero_path(@superhero) %>
+<%= link_to 'Back', superheroes_path %>
